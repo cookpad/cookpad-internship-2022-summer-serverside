@@ -9,5 +9,12 @@ module Types
     def test_field
       "Hello World!"
     end
+
+    field :recipes, [Types::RecipeType], null: false
+    def recipes
+      client = MinirecipeClient.new
+      res = client.get("/recipes")
+      res[:recipes]
+    end
   end
 end
