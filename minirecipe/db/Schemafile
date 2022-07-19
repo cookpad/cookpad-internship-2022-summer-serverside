@@ -1,6 +1,24 @@
 create_table :recipes do |t|
+  t.integer :user_id, null: false
   t.string :title, null: false
   t.string :description, null: false
+  t.datetime :photo_saved_at, null: true
+
+  t.timestamps
+end
+
+create_table :ingredients do |t|
+  t.integer :recipe_id, null: false
+  t.string :name, null: false
+  t.integer :position, null: false
+
+  t.timestamps
+
+  t.index [:recipe_id, :position]
+end
+
+create_table :users do |t|
+  t.string :name, null: false
 
   t.timestamps
 end
