@@ -6,5 +6,7 @@ module Types
     def test_field
       "Hello World"
     end
+
+    field :add_hashtags, mutation: Mutations::AddHashtags
   end
 end
