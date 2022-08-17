@@ -5,6 +5,7 @@ class Mutations::AddHashtags < Mutations::BaseMutation
   field :hashtags, [Types::HashtagType]
 
   def resolve(recipe_id:, value:)
+    # TODO: Error Handling
     body = { recipe_id: recipe_id, value: value }
 
     client = MinihashtagClient.new

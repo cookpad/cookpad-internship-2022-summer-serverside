@@ -1,6 +1,8 @@
 class Recipe < ApplicationRecord
   include Tofuable
+  include Paginatable
 
-  has_many :ingredients, -> { order(:position) }
   belongs_to :user
+  has_many :ingredients, -> { order("position") }, dependent: :destroy
+  has_many :steps, -> { order("position") }, dependent: :destroy
 end

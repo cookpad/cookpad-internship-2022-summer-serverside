@@ -11,7 +11,7 @@ class HashtagsController < ApplicationController
     hashtags = ActiveRecord::Base.transaction do
       Hashtag.create!(hashtag_attributes)
     end
-    render json: hashtags, adapter: :json, status: :created
+    render json: hashtags, status: :created
   end
 
   private

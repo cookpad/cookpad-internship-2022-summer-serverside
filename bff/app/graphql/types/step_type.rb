@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 module Types
-  class UserType < Types::BaseObject
+  class StepType < Types::BaseObject
     field :id, ID, null: false
-    field :name, String, null: false
+    field :memo, String, null: false
     field :image_url, String, null: true
   end
 end

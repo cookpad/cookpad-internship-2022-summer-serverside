@@ -1,5 +1,5 @@
 create_table :hashtags do |t|
-  t.integer :recipe_id, null: false
+  t.bigint :recipe_id, null: false
   t.string :name, null: false
 
   t.timestamps

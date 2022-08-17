@@ -1,3 +1,4 @@
+# NOTE: ここの実装はやや自信なし。だけどページネーションは課題にしたい
 module Paginatable
   extend ActiveSupport::Concern
 
